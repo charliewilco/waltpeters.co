@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop-HD" transform="translate(-592.000000, -872.000000)" stroke="#FEFDFB" stroke-width="2">
+            <g id="Group-7" transform="translate(577.000000, 856.000000)">
+                <g id="Group-5">
+                    <g id="Group-2" transform="translate(16.000000, 16.000000)">
+                        <polyline id="Path" points="0 47 6 44 16 60 11 63"></polyline>
+                        <path d="M26,46 L38,46 C40.2,46 42,44.2 42,42 C42,39.8 40.2,38 38,38 L22.704,38 C20.933,38 19.194,38.47 17.665,39.362 L8,45" id="Path"></path>
+                        <path d="M39,46 L56.479,39.33 C58.512,38.488 60.864,39.462 61.706,41.495 C62.548,43.527 61.574,45.879 59.541,46.721 L41.87,54.208 C40.636,54.73 39.309,55 37.969,55 L22.264,55 C21.177,55 20.111,55.295 19.18,55.854 L15.608,58" id="Path"></path>
+                        <path d="M40,28 L40,24 C40,24 32,27 27,14" id="Path"></path>
+                        <path d="M40,24 C40,24 44,23 44,18" id="Path"></path>
+                        <path d="M35.132,16.757 C38.508,-0.124 16,1.002 16,1.002 C16,1.002 18.251,4.378 18.251,11.13 C18.251,15.632 20.501,24.635 30.63,21.259" id="Path"></path>
+                        <path d="M43.854,21.015 C56.979,22.888 55.15,5.629 55.15,5.629 C55.15,5.629 52.65,7.504 47.458,7.793 C43.997,7.986 37.17,10.102 40.2,17.746" id="Path"></path>
+                        <path d="M54.701,34.999 C53.054,33.159 50.664,32 48,32 C47.831,32 47.665,32.016 47.498,32.025 C45.885,29.6 43.131,28 40,28 C36.827,28 34.044,29.646 32.441,32.126 C31.971,32.05 31.492,32 31,32 C29.147,32 27.429,32.563 26,33.524" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
