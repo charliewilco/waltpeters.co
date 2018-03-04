@@ -18,6 +18,11 @@ export default class MyDocument extends Document {
           <title>Walt Peters</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#d8a75b" />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cloud.typography.com/7107912/6171792/css/fonts.css"
+          />
           <link rel="stylesheet" href="static/level.css" />
 
           {this.props.styleTags}

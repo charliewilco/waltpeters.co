@@ -8,13 +8,14 @@
     "deploy": "now && now alias",
     "precommit": "lint-staged"
   },
-
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.1.5",
+  "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.5",
     "next": "^5.0.0",
-    "prettier": "^1.11.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "styled-components": "^2.1.0"
