@@ -16,7 +16,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>Walt Peters</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#d8a75b" />
           <link rel="stylesheet" href="static/level.css" />
+
           {this.props.styleTags}
         </Head>
         <body>

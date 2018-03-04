@@ -16,6 +16,8 @@ const Content = styled.p`
 
 const Title = styled.h3`
   font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.875rem;
 `
 
 const IconContainer = styled.div`

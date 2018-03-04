@@ -3,11 +3,26 @@ import Logo from './logo'
 
 const Banner = styled.div`
   background: #fefdfb;
+  position: relative;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  margin-bottom: 3rem;
+  z-index: 1;
 
   @media (min-width: 700px) {
     display: flex;
-    align-content: center;
+  }
+
+  &::after {
+    content: '';
+    width: 25%;
+    height: 25%;
+    background-color: #d8a75b;
+    padding: 1rem;
+    position: absolute;
+    margin: 0;
+    right: -1rem;
+    top: -1rem;
+    z-index: -1;
   }
 `
 
