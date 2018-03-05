@@ -34,7 +34,7 @@
     ]
   },
   "now": {
-    "alias": "waltpeters.co"
+    "alias": ["waltpeters.co", "www.waltpeters.co"]
   },
   "lint-staged": {
     "*.{js,json,css,md}": ["prettier --write", "git add"]

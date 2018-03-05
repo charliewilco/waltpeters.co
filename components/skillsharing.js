@@ -37,7 +37,7 @@ export default () => (
           seminars in the coming weeks and currently over one-on-one training.
         </p>
         <p>
-          <CTA>Get in Contact today!</CTA>
+          <CTA>Get in Contact Today!</CTA>
         </p>
       </Content>
     </Flex>
