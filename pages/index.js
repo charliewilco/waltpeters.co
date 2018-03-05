@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import Wrapper from '../components/wrapper'
 import Offering from '../components/offering'
@@ -25,13 +25,20 @@ const Title = styled.h3`
 `
 
 export default () => (
-  <Wrapper>
-    <Banner />
-    <section>
-      <Title>Offerings</Title>
-      <Flex>
-        {offerings.map((offer, i) => <Offering key={i} {...offer} />)}
-      </Flex>
-    </section>
-  </Wrapper>
+  <Fragment>
+    <Wrapper fixed>
+      <Banner />
+      <section>
+        <Title>Offerings</Title>
+        <Flex>
+          {offerings.map((offer, i) => <Offering key={i} {...offer} />)}
+        </Flex>
+      </section>
+    </Wrapper>
+    <Wrapper background="#d8a75b">
+      <Wrapper color="#FEFDFB">
+        <Title>Contact</Title>
+      </Wrapper>
+    </Wrapper>
+  </Fragment>
 )

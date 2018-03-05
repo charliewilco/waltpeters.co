@@ -2,21 +2,31 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   margin-bottom: 1rem;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 1rem;
 
   @media (min-width: 700px) {
     max-width: 18rem;
     margin: 0 1rem 1rem;
+
+    text-align: center;
+
+    & div {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 `
 
 const Content = styled.p`
   font-size: 0.875rem;
   line-height: 1.7;
+  text-align: left;
 `
 
 const Title = styled.h3`
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 0.875rem;
 `
 

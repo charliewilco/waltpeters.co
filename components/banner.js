@@ -3,26 +3,12 @@ import Logo from './logo'
 
 const Banner = styled.div`
   background: #fefdfb;
-  position: relative;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   margin-bottom: 3rem;
   z-index: 1;
 
   @media (min-width: 700px) {
     display: flex;
-  }
-
-  &::after {
-    content: '';
-    width: 25%;
-    height: 25%;
-    background-color: #d8a75b;
-    padding: 1rem;
-    position: absolute;
-    margin: 0;
-    right: -1rem;
-    top: -1rem;
-    z-index: -1;
   }
 `
 
@@ -45,8 +31,9 @@ const Title = styled.h1`
   text-align: center;
 
   @media (min-width: 700px) {
-    font-size: 2.5rem;
+    font-size: 2.125rem;
     text-align: left;
+    font-weight: 700;
   }
 `
 
@@ -96,22 +83,41 @@ const LogoContainer = styled.div`
   }
 `
 
+const ColorOffset = styled.div`
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 20vw;
+    height: 20vh;
+    background-color: #d8a75b;
+    padding: 1rem;
+    position: absolute;
+    margin: 0;
+    right: -1rem;
+    top: -1rem;
+    z-index: -1;
+  }
+`
+
 export default () => (
-  <Banner>
-    <Aside>
-      <Image src="static/garden.jpg" />
-    </Aside>
-    <Post>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
-      <Title>Walt Peters</Title>
-      <Sub>Gardening Consultant</Sub>
-      <p>
-        An award-winning landscaping expert with over 50 years of experience,
-        looking to equip and teach the community how to grow, garden and invest
-        in back in their own communities.
-      </p>
-    </Post>
-  </Banner>
+  <ColorOffset>
+    <Banner>
+      <Aside>
+        <Image src="static/garden.jpg" />
+      </Aside>
+      <Post>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
+        <Title>Walt Peters</Title>
+        <Sub>Gardening Consultant</Sub>
+        <p>
+          An award-winning landscaping expert with over 50 years of experience,
+          looking to equip and teach the community how to grow, garden and
+          invest in back in their own communities.
+        </p>
+      </Post>
+    </Banner>
+  </ColorOffset>
 )
