@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import Wrapper from '../components/wrapper'
 import Offering from '../components/offering'
 import Banner from '../components/banner'
-
-import { offerings } from '../content.json'
+import Contact from '../components/contact'
+import Skillsharing from '../components/skillsharing'
+import data from '../content.json'
 
 const Flex = styled.div`
   padding: 3rem 0;
@@ -19,26 +20,39 @@ const Flex = styled.div`
 
 const Title = styled.h3`
   font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   text-align: center;
-  font-weight: 500;
+`
+
+const Copyright = styled.footer`
+  padding: 0.5rem;
 `
 
 export default () => (
   <Fragment>
     <Wrapper fixed>
-      <Banner />
+      <Banner {...data} />
       <section>
         <Title>Offerings</Title>
         <Flex>
-          {offerings.map((offer, i) => <Offering key={i} {...offer} />)}
+          {data.offerings.map((offer, i) => <Offering key={i} {...offer} />)}
         </Flex>
       </section>
     </Wrapper>
-    <Wrapper background="#d8a75b">
-      <Wrapper color="#FEFDFB">
-        <Title>Contact</Title>
+    <main>
+      <Skillsharing />
+      <Wrapper background="#d8a75b">
+        <Wrapper color="#FEFDFB" fixed>
+          <Title>Contact</Title>
+          <Contact />
+        </Wrapper>
       </Wrapper>
-    </Wrapper>
+    </main>
+    <Copyright>
+      <Wrapper tight fixed>
+        <span>&copy; Copyright {new Date().getFullYear()} Walt Peters.</span>
+      </Wrapper>
+    </Copyright>
   </Fragment>
 )

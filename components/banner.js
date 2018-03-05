@@ -17,6 +17,7 @@ const Post = styled.header`
   flex: 4;
   & > p {
     max-width: 33rem;
+    line-height: 1.7;
   }
 
   @media (min-width: 700px) {
@@ -85,12 +86,11 @@ const LogoContainer = styled.div`
 
 const ColorOffset = styled.div`
   position: relative;
-
   &::after {
     content: '';
     width: 20vw;
     height: 20vh;
-    background-color: #d8a75b;
+    background: rgba(216, 167, 91, 0.5);
     padding: 1rem;
     position: absolute;
     margin: 0;
@@ -100,7 +100,7 @@ const ColorOffset = styled.div`
   }
 `
 
-export default () => (
+export default ({ title, about, name }) => (
   <ColorOffset>
     <Banner>
       <Aside>
@@ -110,13 +110,9 @@ export default () => (
         <LogoContainer>
           <Logo />
         </LogoContainer>
-        <Title>Walt Peters</Title>
-        <Sub>Gardening Consultant</Sub>
-        <p>
-          An award-winning landscaping expert with over 50 years of experience,
-          looking to equip and teach the community how to grow, garden and
-          invest in back in their own communities.
-        </p>
+        <Title>{name}</Title>
+        <Sub>{title}</Sub>
+        <p>{about}</p>
       </Post>
     </Banner>
   </ColorOffset>

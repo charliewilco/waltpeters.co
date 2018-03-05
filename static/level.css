@@ -39,3 +39,7 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
+
+p:not(:last-of-type) {
+  margin-bottom: 1.25rem;
+}
