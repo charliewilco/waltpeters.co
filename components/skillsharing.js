@@ -18,6 +18,10 @@ const Content = styled.section`
   flex: 0 1 33rem;
 `
 
+const CTA = styled.b`
+  color: #d8a75b;
+`
+
 export default () => (
   <Wrapper fixed>
     <Flex>
@@ -33,7 +37,7 @@ export default () => (
           seminars in the coming weeks and currently over one-on-one training.
         </p>
         <p>
-          <b>Get in Contact today!</b>
+          <CTA>Get in Contact today!</CTA>
         </p>
       </Content>
     </Flex>
