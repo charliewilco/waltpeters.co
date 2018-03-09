@@ -34,7 +34,7 @@ export default () => (
           of you. Central Pennsylvania is home to tremendous valleys, mountain
           ranges and fields, and there is so much history and potential in
           cultivating a healthy garden in this region. I’ll be offering group
-          seminars in the coming weeks and currently over one-on-one training.
+          seminars in the coming weeks and currently offer one-on-one training.
         </p>
         <p>
           <CTA>Get in Contact Today!</CTA>

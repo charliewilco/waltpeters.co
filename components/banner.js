@@ -86,6 +86,7 @@ const LogoContainer = styled.div`
 
 const ColorOffset = styled.div`
   position: relative;
+
   &::after {
     content: '';
     width: 20vw;
@@ -94,9 +95,14 @@ const ColorOffset = styled.div`
     padding: 1rem;
     position: absolute;
     margin: 0;
-    right: -1rem;
-    top: -1rem;
+    right: -0.5rem;
+    top: -0.5rem;
     z-index: -1;
+
+    @media (min-width: 700px) {
+      right: -1rem;
+      top: -1rem;
+    }
   }
 `
 
