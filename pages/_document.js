@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Walt Peters | Gardening Consultant</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta
