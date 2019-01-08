@@ -47,10 +47,19 @@ const Icon = styled.img`
   margin: 0 auto;
 `
 
-export default ({ title, content, icon }) => (
+interface OfferingProps {
+  title: string;
+  content: string;
+  icon: string;
+}
+
+const Offering: React.SFC<OfferingProps> = ({ title, content, icon }) => (
   <Container>
     <IconContainer>{icon && <Icon src={icon} />}</IconContainer>
     <Title>{title}</Title>
     <Content>{content}</Content>
   </Container>
 )
+
+
+export default Offering

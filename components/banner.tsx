@@ -1,3 +1,4 @@
+import * as React from 'react'
 import styled from 'styled-components'
 import Logo from './logo'
 
@@ -106,7 +107,13 @@ const ColorOffset = styled.div`
   }
 `
 
-export default ({ title, about, name }) => (
+interface HeroBannerProps {
+  title: string;
+  about: string;
+  name: string;
+}
+
+const HeroBanner: React.SFC<HeroBannerProps> = ({ title, about, name }) => (
   <ColorOffset>
     <Banner>
       <Aside>
@@ -123,3 +130,5 @@ export default ({ title, about, name }) => (
     </Banner>
   </ColorOffset>
 )
+
+export default HeroBanner;

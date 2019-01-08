@@ -30,7 +30,7 @@ const Copyright = styled.footer`
   padding: 0.5rem;
 `
 
-export default () => (
+export default (): JSX.Element => (
   <>
     <Head>
       <title>Walt Peters | Gardening Consultant</title>

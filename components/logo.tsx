@@ -1,4 +1,7 @@
-export default () => (
+import * as React from 'react'
+
+
+export default (): JSX.Element => (
   <svg width="62px" height="62px" viewBox="0 0 62 62">
     <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -68,13 +69,14 @@ const PhoneIcon = ({ size = [82, 82] }) => (
   </svg>
 )
 
-export default () => (
+export default (): JSX.Element => (
   <Container>
     <Cell>
       <PhoneIcon size={[24, 24]} />
       <Title>Call</Title>
       <Para>
-        Available by phone or text during normal business hours. <br />717-543-7475
+        Available by phone or text during normal business hours. <br />
+        717-543-7475
       </Para>
       <AnchorButton href="tel:+17175437475">Call Me</AnchorButton>
     </Cell>
