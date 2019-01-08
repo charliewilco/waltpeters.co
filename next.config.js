@@ -5,11 +5,6 @@ const { PHASE_PRODUCTION_SERVER } =
     ? require('next/constants')
     : require('next-server/constants');
 
-const config = {
-  manifest,
-  workboxOpts
-};
-
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_PRODUCTION_SERVER) {
     // Config used to run in production.
