@@ -1,28 +1,30 @@
-import styled from 'styled-components'
-import Wrapper from './wrapper'
+import * as React from 'react';
+
+import styled from 'styled-components';
+import Wrapper from './wrapper';
 
 const Flex = styled.article`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const Title = styled.h3`
   margin-bottom: 1.5rem;
-`
+`;
 
 const Content = styled.section`
   font-size: 106.25%;
   line-height: 1.7;
   flex: 0 1 33rem;
-`
+`;
 
 const CTA = styled.b`
   color: #d8a75b;
-`
+`;
 
-export default () => (
+export default (): JSX.Element => (
   <Wrapper fixed>
     <Flex>
       <Title>Skill-sharing for the Community</Title>
@@ -42,4 +44,4 @@ export default () => (
       </Content>
     </Flex>
   </Wrapper>
-)
+);

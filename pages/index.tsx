@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import * as React from 'react'
+import Head from 'next/head'
 import styled from 'styled-components'
 import Wrapper from '../components/wrapper'
 import Offering from '../components/offering'
@@ -29,14 +30,19 @@ const Copyright = styled.footer`
   padding: 0.5rem;
 `
 
-export default () => (
-  <Fragment>
+export default (): JSX.Element => (
+  <>
+    <Head>
+      <title>Walt Peters | Gardening Consultant</title>
+    </Head>
     <Wrapper fixed>
       <Banner {...data} />
       <section>
         <Title>Offerings</Title>
         <Flex>
-          {data.offerings.map((offer, i) => <Offering key={i} {...offer} />)}
+          {data.offerings.map((offer, i) => (
+            <Offering key={i} {...offer} />
+          ))}
         </Flex>
       </section>
     </Wrapper>
@@ -54,5 +60,5 @@ export default () => (
         <span>&copy; Copyright {new Date().getFullYear()} Walt Peters.</span>
       </Wrapper>
     </Copyright>
-  </Fragment>
+  </>
 )

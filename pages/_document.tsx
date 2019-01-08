@@ -1,21 +1,27 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript, NextDocumentContext } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props =>
+interface WithStyleTags {
+  styleTags: any;
+}
+
+export default class MyDocument extends Document<WithStyleTags> {
+  public static async getInitialProps(context: NextDocumentContext) {
+    const initialProps = await Document.getInitialProps(context);
+    const sheet = new ServerStyleSheet();
+
+    const page = context.renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)
-    )
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    );
+
+    const styleTags = sheet.getStyleElement();
+    return { ...page, ...initialProps, styleTags };
   }
 
   render() {
     return (
       <html>
         <Head>
-          <title>Walt Peters | Gardening Consultant</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta
