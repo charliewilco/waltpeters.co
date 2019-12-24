@@ -1,24 +1,38 @@
-import Document, { Head, Main, NextScript, NextDocumentContext } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, {
+  Head,
+  Main,
+  NextScript,
+  DocumentContext
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-interface WithStyleTags {
-  styleTags: any;
-}
-
-export default class MyDocument extends Document<WithStyleTags> {
-  public static async getInitialProps(context: NextDocumentContext) {
-    const initialProps = await Document.getInitialProps(context);
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
-    const page = context.renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />)
-    );
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        });
 
-    const styleTags = sheet.getStyleElement();
-    return { ...page, ...initialProps, styleTags };
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
-  render() {
+  public render(): JSX.Element {
     return (
       <html>
         <Head>
@@ -41,13 +55,12 @@ export default class MyDocument extends Document<WithStyleTags> {
           />
           <link rel="stylesheet" href="static/level.css" />
           <link rel="icon" href="static/favicon.ico" />
-          {this.props.styleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

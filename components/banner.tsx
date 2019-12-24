@@ -1,6 +1,6 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import Logo from './logo'
+import * as React from 'react';
+import styled from 'styled-components';
+import Logo from './logo';
 
 const Banner = styled.div`
   background: #fefdfb;
@@ -11,7 +11,7 @@ const Banner = styled.div`
   @media (min-width: 700px) {
     display: flex;
   }
-`
+`;
 
 const Post = styled.header`
   padding: 1rem;
@@ -24,7 +24,7 @@ const Post = styled.header`
   @media (min-width: 700px) {
     padding: 5rem 1rem;
   }
-`
+`;
 
 const Title = styled.h1`
   color: #d8a75b;
@@ -37,7 +37,7 @@ const Title = styled.h1`
     text-align: left;
     font-weight: 700;
   }
-`
+`;
 
 const Sub = styled.h2`
   font-weight: 400;
@@ -49,7 +49,7 @@ const Sub = styled.h2`
     text-align: left;
     font-size: 1.5rem;
   }
-`
+`;
 
 const Image = styled.img`
   position: absolute;
@@ -63,7 +63,7 @@ const Image = styled.img`
   object-fit: cover;
   vertical-align: middle;
   font-style: italic;
-`
+`;
 
 const Aside = styled.figure`
   position: relative;
@@ -74,7 +74,7 @@ const Aside = styled.figure`
     flex: 2;
     height: auto;
   }
-`
+`;
 const LogoContainer = styled.div`
   margin: 0 auto;
   text-align: center;
@@ -83,7 +83,7 @@ const LogoContainer = styled.div`
   @media (min-width: 700px) {
     text-align: left;
   }
-`
+`;
 
 const ColorOffset = styled.div`
   position: relative;
@@ -105,7 +105,7 @@ const ColorOffset = styled.div`
       top: -1rem;
     }
   }
-`
+`;
 
 interface HeroBannerProps {
   title: string;
@@ -113,7 +113,7 @@ interface HeroBannerProps {
   name: string;
 }
 
-const HeroBanner: React.SFC<HeroBannerProps> = ({ title, about, name }) => (
+const HeroBanner: React.FC<HeroBannerProps> = ({ title, about, name }) => (
   <ColorOffset>
     <Banner>
       <Aside>
@@ -129,6 +129,6 @@ const HeroBanner: React.SFC<HeroBannerProps> = ({ title, about, name }) => (
       </Post>
     </Banner>
   </ColorOffset>
-)
+);
 
 export default HeroBanner;
