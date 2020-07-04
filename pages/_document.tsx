@@ -48,11 +48,6 @@ export default class MyDocument extends Document {
             content="An award-winning landscaping expert with over 50 years of experience, looking to equip and teach the community how to grow, garden and invest in back in their own communities in Central PA."
           />
 
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cloud.typography.com/7107912/6171792/css/fonts.css"
-          />
           <link rel="stylesheet" href="static/level.css" />
           <link rel="icon" href="static/favicon.ico" />
         </Head>

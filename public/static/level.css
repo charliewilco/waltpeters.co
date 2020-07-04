@@ -13,8 +13,7 @@ html {
   box-sizing: border-box;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  font-family: 'Sentinel SSm A', 'Sentinel SSm B', Sentinel, Charter, Georgia,
-    system-ui, sans-serif;
+  font-family: 'Source Serif Pro', Charter, Georgia, system-ui, sans-serif;
   background: #fefdfb;
 }
 
