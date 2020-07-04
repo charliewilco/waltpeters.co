@@ -1,64 +1,40 @@
-import * as React from 'react'
-import Head from 'next/head'
-import styled from 'styled-components'
-import Wrapper from '../components/wrapper'
-import Offering from '../components/offering'
-import Banner from '../components/banner'
-import Contact from '../components/contact'
-import Skillsharing from '../components/skillsharing'
-import data from '../content.json'
-
-const Flex = styled.div`
-  padding: 3rem 0;
-  @media (min-width: 700px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-`
-
-const Title = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  text-align: center;
-`
-
-const Copyright = styled.footer`
-  padding: 0.5rem;
-`
+import * as React from 'react';
+import Head from 'next/head';
+import Offering from '../components/offering';
+import Banner from '../components/banner';
+import Contact from '../components/contact';
+import Skillsharing from '../components/skillsharing';
+import data from '../content.json';
 
 export default (): JSX.Element => (
   <>
     <Head>
       <title>Walt Peters | Gardening Consultant</title>
     </Head>
-    <Wrapper fixed>
+    <section className="Wrapper Wrapper--fixed">
       <Banner {...data} />
-      <section>
-        <Title>Offerings</Title>
-        <Flex>
-          {data.offerings.map((offer, i) => (
-            <Offering key={i} {...offer} />
-          ))}
-        </Flex>
-      </section>
-    </Wrapper>
+    </section>
+    <section className="Wrapper">
+      <h3 className="SectionTitle">Offerings</h3>
+      <div className="OfferingFlex">
+        {data.offerings.map((offer, i) => (
+          <Offering key={i} {...offer} />
+        ))}
+      </div>
+    </section>
     <main>
       <Skillsharing />
-      <Wrapper background="#d8a75b">
-        <Wrapper color="#FEFDFB" fixed>
-          <Title>Contact</Title>
+      <section className="Wrapper" style={{ background: '#d8a75b' }}>
+        <div className="Wrapper Wrapper--fixed" style={{ color: '#FEFDFB' }}>
+          <h3 className="SectionTitle">Contact</h3>
           <Contact />
-        </Wrapper>
-      </Wrapper>
+        </div>
+      </section>
     </main>
-    <Copyright>
-      <Wrapper tight fixed>
+    <footer className="PageFooter">
+      <div className="Wrapper Wrapper--tight Wrapper--fixed">
         <span>&copy; Copyright {new Date().getFullYear()} Walt Peters.</span>
-      </Wrapper>
-    </Copyright>
+      </div>
+    </footer>
   </>
-)
+);

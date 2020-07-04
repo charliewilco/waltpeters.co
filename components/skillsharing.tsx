@@ -1,34 +1,10 @@
 import * as React from 'react';
 
-import styled from 'styled-components';
-import Wrapper from './wrapper';
-
-const Flex = styled.article`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Title = styled.h3`
-  margin-bottom: 1.5rem;
-`;
-
-const Content = styled.section`
-  font-size: 106.25%;
-  line-height: 1.7;
-  flex: 0 1 33rem;
-`;
-
-const CTA = styled.b`
-  color: #d8a75b;
-`;
-
 export default (): JSX.Element => (
-  <Wrapper fixed>
-    <Flex>
-      <Title>Skill-sharing for the Community</Title>
-      <Content>
+  <section className="Wrapper Wrapper--fixed">
+    <article className="SkillContainer">
+      <h3 className="SkillTitle">Skill-sharing for the Community</h3>
+      <section className="SkillContent">
         <p>
           <b>Skill-sharing</b> simply put, is sharing expert skills with another
           party interested in acquiring them. With over 50 years of experience
@@ -39,9 +15,9 @@ export default (): JSX.Element => (
           seminars in the coming weeks and currently offer one-on-one training.
         </p>
         <p>
-          <CTA>Get in Contact Today!</CTA>
+          <b className="SkillCTA">Get in Contact Today!</b>
         </p>
-      </Content>
-    </Flex>
-  </Wrapper>
+      </section>
+    </article>
+  </section>
 );

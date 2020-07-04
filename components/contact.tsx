@@ -1,35 +1,4 @@
-import * as React from 'react'
-import styled from 'styled-components'
-
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`
-
-const Cell = styled.div`
-  flex: 0 1 18rem;
-  margin-bottom: 2rem;
-`
-
-const Title = styled.h4`
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-`
-
-const AnchorButton = styled.a`
-  padding: 0.5rem 2.375rem;
-  display: inline-block;
-  color: #d8a75b;
-  background: #fefdfb;
-  text-decoration: none;
-  border-radius: 4px;
-`
-
-const Para = styled.p`
-  margin-bottom: 1rem;
-`
+import * as React from 'react';
 
 const EmailIcon = ({ size = [94, 48] }) => (
   <svg width={size[0]} height={size[1]} viewBox="0 0 94 48">
@@ -42,7 +11,7 @@ const EmailIcon = ({ size = [94, 48] }) => (
       />
     </g>
   </svg>
-)
+);
 
 const PhoneIcon = ({ size = [82, 82] }) => (
   <svg width={size[0]} height={size[1]} viewBox="0 0 82 82">
@@ -67,28 +36,32 @@ const PhoneIcon = ({ size = [82, 82] }) => (
       </g>
     </g>
   </svg>
-)
+);
 
 export default (): JSX.Element => (
-  <Container>
-    <Cell>
+  <div className="ContactContainer">
+    <div className="ContactCell">
       <PhoneIcon size={[24, 24]} />
-      <Title>Call</Title>
-      <Para>
+      <h4 className="ContactTitle">Call</h4>
+      <p className="ContactContent">
         Available by phone or text during normal business hours. <br />
         717-543-7475
-      </Para>
-      <AnchorButton href="tel:+17175437475">Call Me</AnchorButton>
-    </Cell>
+      </p>
+      <a href="tel:+17175437475" className="ContactButtonLink">
+        Call Me
+      </a>
+    </div>
 
-    <Cell>
+    <div className="ContactCell">
       <EmailIcon size={[47, 24]} />
-      <Title>Email</Title>
-      <Para>
+      <h4 className="ContactTitle">Email</h4>
+      <p className="ContactContent">
         Email is the best way to get a conversation started about your
         individual needs.
-      </Para>
-      <AnchorButton href="mailto:info@waltpeters.co">Email Me</AnchorButton>
-    </Cell>
-  </Container>
-)
+      </p>
+      <a href="mailto:info@waltpeters.co" className="ContactButtonLink">
+        Email Me
+      </a>
+    </div>
+  </div>
+);

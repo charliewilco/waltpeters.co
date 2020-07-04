@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import 'typeface-source-serif-pro';
+import '../components/global.css';
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
