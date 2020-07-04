@@ -1,5 +1,6 @@
 import Document, {
   Head,
+  Html,
   Main,
   NextScript,
   DocumentContext
@@ -34,7 +35,7 @@ export default class MyDocument extends Document {
 
   public render(): JSX.Element {
     return (
-      <html>
+      <Html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -47,7 +48,6 @@ export default class MyDocument extends Document {
             name="description"
             content="An award-winning landscaping expert with over 50 years of experience, looking to equip and teach the community how to grow, garden and invest in back in their own communities in Central PA."
           />
-
           <link rel="stylesheet" href="static/level.css" />
           <link rel="icon" href="static/favicon.ico" />
         </Head>
@@ -55,7 +55,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
