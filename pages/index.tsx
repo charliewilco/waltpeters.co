@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import { OfferingBlock } from '../components/offering';
 import { HeroBanner } from '../components/banner';
@@ -5,7 +6,7 @@ import { Contact } from '../components/contact';
 import { SkillSharing } from '../components/skillsharing';
 import data from '../content.json';
 
-export default (): JSX.Element => (
+const IndexPage: NextPage = () => (
   <div>
     <Head>
       <title>Walt Peters | Gardening Consultant</title>
@@ -78,3 +79,5 @@ export default (): JSX.Element => (
     `}</style>
   </div>
 );
+
+export default IndexPage;

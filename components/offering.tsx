@@ -15,6 +15,7 @@ export const OfferingBlock: React.VFC<OfferingProps> = ({
     <div className="OfferingIconContainer">
       {icon && (
         <Image
+          alt=""
           className="OfferingIcon"
           width={40}
           height={40}

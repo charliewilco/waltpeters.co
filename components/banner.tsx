@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from './logo';
+import { Logo } from './logo';
 
 interface HeroBannerProps {
   title: string;
@@ -14,10 +14,15 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
 }) => (
   <div className="BannerColorOffset">
     <div className="Banner">
-      <figure className="BannerAsideFigure">
-        <Image layout="fill" src="/static/garden.jpg" priority />
+      <figure>
+        <Image
+          alt="Small greenhouse"
+          layout="fill"
+          src="/static/garden.jpg"
+          priority
+        />
       </figure>
-      <header className="BannerPostHeader">
+      <header>
         <div className="BannerLogoContainer">
           <Logo />
         </div>
@@ -57,7 +62,7 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
         text-align: center;
         margin-bottom: 1.5rem;
       }
-      .BannerAsideFigure {
+      figure {
         position: relative;
         width: 100%;
         height: 20rem;
@@ -104,7 +109,7 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
           font-size: 1.5rem;
         }
 
-        .BannerAsideFigure {
+        figure {
           flex: 2;
           height: auto;
         }
