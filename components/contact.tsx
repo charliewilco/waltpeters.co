@@ -45,7 +45,6 @@ export const Contact: React.VFC = () => (
           --columns: 1;
           display: grid;
           gap: 2rem;
-          padding: 3rem 0;
           margin: 0 auto;
           grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
         }

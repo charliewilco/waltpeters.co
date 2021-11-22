@@ -36,7 +36,6 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
         background: #fefdfb;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23),
           0 3px 6px 0 rgba(0, 0, 0, 0.16);
-        margin-bottom: 3rem;
         z-index: 1;
       }
 
@@ -80,8 +79,8 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
 
       .BannerColorOffset::after {
         content: '';
-        width: 20vw;
-        height: 20vh;
+        width: 12rem;
+        height: 12rem;
         background: rgba(216, 167, 91, 0.5);
         padding: 1rem;
         position: absolute;
@@ -93,6 +92,7 @@ export const HeroBanner: React.VFC<HeroBannerProps> = ({
       @media (min-width: 42rem) {
         .Banner {
           display: flex;
+          margin-top: 1rem;
         }
 
         h1 {
