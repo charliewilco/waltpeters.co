@@ -1,10 +1,8 @@
-import * as React from 'react';
-
-export default (): JSX.Element => (
+export const SkillSharing: React.VFC = () => (
   <section className="Wrapper Wrapper--fixed">
-    <article className="SkillContainer">
-      <h3 className="SkillTitle">Skill-sharing for the Community</h3>
-      <section className="SkillContent">
+    <article>
+      <h3>Skill-sharing for the Community</h3>
+      <section>
         <p>
           <b>Skill-sharing</b> simply put, is sharing expert skills with another
           party interested in acquiring them. With over 50 years of experience
@@ -15,9 +13,28 @@ export default (): JSX.Element => (
           seminars in the coming weeks and currently offer one-on-one training.
         </p>
         <p>
-          <b className="SkillCTA">Get in Contact Today!</b>
+          <b>Get in Contact Today!</b>
         </p>
       </section>
     </article>
+    <style jsx>{`
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+
+      article {
+        max-width: 65ch;
+        margin-right: auto;
+      }
+
+      p {
+        font-size: 106.25%;
+        line-height: 1.7;
+      }
+
+      b {
+        color: #d8a75b;
+      }
+    `}</style>
   </section>
 );
