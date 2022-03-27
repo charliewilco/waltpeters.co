@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="/logo.png" />
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
