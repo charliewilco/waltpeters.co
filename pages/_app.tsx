@@ -17,13 +17,20 @@ export default function CustomApp({ Component, pageProps }: AppProps) {
             box-sizing: inherit;
           }
 
+          :root {
+            --bg: rgb(248, 244, 236);
+            --fg: #333;
+            --card: #fefdfb;
+          }
+
           html {
             box-sizing: border-box;
             text-size-adjust: 100%;
             -webkit-tap-highlight-color: transparent;
             font-family: 'Source Serif Pro', Charter, Georgia, system-ui,
               sans-serif;
-            background: #fefdfb;
+            background: var(--bg);
+            color: var(--fg);
           }
 
           aside,
@@ -51,6 +58,14 @@ export default function CustomApp({ Component, pageProps }: AppProps) {
 
           p:not(:last-of-type) {
             margin-bottom: 1.25rem;
+          }
+
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --bg: #131313;
+              --fg: #fefdfb;
+              --card: #2b2b2b;
+            }
           }
         `}
       </style>

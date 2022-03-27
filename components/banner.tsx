@@ -51,7 +51,7 @@ export const HeroBanner: React.FC<IHeroBannerProps> = ({
     </div>
     <style jsx>{`
       .banner {
-        background: #fefdfb;
+        background: var(--card);
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23),
           0 3px 6px 0 rgba(0, 0, 0, 0.16);
         z-index: 1;
@@ -68,6 +68,7 @@ export const HeroBanner: React.FC<IHeroBannerProps> = ({
 
       h1 {
         color: #d8a75b;
+        font-weight: 400;
         font-size: 1.875rem;
         margin: 0 0 0.5rem;
         text-align: center;
@@ -116,7 +117,6 @@ export const HeroBanner: React.FC<IHeroBannerProps> = ({
         h1 {
           font-size: 2.125rem;
           text-align: left;
-          font-weight: 700;
         }
         header {
           padding: 5rem 1rem;

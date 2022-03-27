@@ -21,7 +21,7 @@ export const OfferingBlock: React.FC<IOfferingProps> = ({
     <style jsx>{`
       .off-container {
         margin-bottom: 1rem;
-        background: #fefdfb;
+        background: var(--card);
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23),
           0 3px 6px 0 rgba(0, 0, 0, 0.16);
         padding: 1rem;
