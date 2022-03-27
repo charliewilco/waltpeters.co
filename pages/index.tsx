@@ -29,6 +29,7 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         name="description"
         content="An award-winning landscaping expert with over 50 years of experience, looking to equip and teach the community how to grow, garden and invest in back in their own communities in Central PA."
       />
+
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta
         name="google-site-verification"
@@ -138,8 +139,8 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       main,
       footer {
         max-width: 56rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-left: auto;
         margin-right: auto;
       }
