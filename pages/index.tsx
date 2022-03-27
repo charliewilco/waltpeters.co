@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps<{ year: string }> = async () => {
 const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   year,
 }) => (
-  <div>
+  <>
     <Head>
       <title>Walt Peters | Gardening Consultant</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,68 +63,34 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       />
       <meta name="theme-color" content="#d8a75b" />
     </Head>
+
+    <header>
+      <div className="banner-color-offset">
+        <div className="banner">
+          <figure>
+            <Image
+              alt="Small greenhouse"
+              layout="fill"
+              src={gardenImage}
+              priority
+            />
+          </figure>
+          <div className="header-contents">
+            <div className="banner-logo-container">
+              <Logo />
+            </div>
+            <h1>Walt Peters</h1>
+            <h2>Gardening Consultant</h2>
+            <p>
+              An award-winning landscaping expert with over 50 years of
+              experience, looking to equip and teach the community how to grow,
+              garden and invest in back in their own communities in Central PA.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <section>
-        <div className="banner-color-offset">
-          <div className="banner">
-            <figure>
-              <Image
-                alt="Small greenhouse"
-                layout="fill"
-                src={gardenImage}
-                priority
-              />
-            </figure>
-            <header>
-              <div className="banner-logo-container">
-                <Logo />
-              </div>
-              <h1>Walt Peters</h1>
-              <h2>Gardening Consultant</h2>
-              <p>
-                An award-winning landscaping expert with over 50 years of
-                experience, looking to equip and teach the community how to
-                grow, garden and invest in back in their own communities in
-                Central PA.
-              </p>
-            </header>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h3>Offerings</h3>
-        <div className="offerings">
-          <div className="off-container">
-            <div className="off-icon-container">{Planter}</div>
-            <h4>On-Site Visits</h4>
-            <p className="off-content">
-              Need garden advice or have a difficult garden problem? I will come
-              to your garden site, take a thorough look, and personally consult
-              with you to grow the best garden possible.
-            </p>
-          </div>
-          <div className="off-container">
-            <div className="off-icon-container">{HandGrowth}</div>
-            <h4>1:1 Training</h4>
-            <p className="off-content">
-              For DIYers or small businesses, I offer one-on-one training for
-              efficient gardening and landscaping practices. I offer individual
-              training and host regular workshops to help grow your knowledge
-              and skill.
-            </p>
-          </div>
-          <div className="off-container">
-            <div className="off-icon-container">{Flower}</div>
-            <h4>Consultation</h4>
-            <p className="off-content">
-              Need help making the most out of your yard space? Don’t know which
-              plants or trees will grow best in your yard? I have 50 years of
-              experience designing beautiful landscapes appropriate to your
-              space and environment.
-            </p>
-          </div>
-        </div>
-      </section>
       <article>
         <h3>Skill-sharing for the Community</h3>
         <p>
@@ -137,9 +103,44 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           seminars in the coming weeks and currently offer one-on-one training.
         </p>
         <p>
-          <b>Get in Contact Today!</b>
+          <b className="no-link">Get in Contact Today!</b>
         </p>
       </article>
+      <section>
+        <h3>Offerings</h3>
+        <div className="offerings">
+          <div className="offering">
+            <div className="off-icon-container">{Planter}</div>
+            <h4>On-Site Visits</h4>
+            <p className="off-content">
+              Need garden advice or have a difficult garden problem? I will come
+              to your garden site, take a thorough look, and personally consult
+              with you to grow the best garden possible.
+            </p>
+          </div>
+          <div className="offering">
+            <div className="off-icon-container">{HandGrowth}</div>
+            <h4>1:1 Training</h4>
+            <p className="off-content">
+              For DIYers or small businesses, I offer one-on-one training for
+              efficient gardening and landscaping practices. I offer individual
+              training and host regular workshops to help grow your knowledge
+              and skill.
+            </p>
+          </div>
+          <div className="offering">
+            <div className="off-icon-container">{Flower}</div>
+            <h4>Consultation</h4>
+            <p className="off-content">
+              Need help making the most out of your yard space? Don’t know which
+              plants or trees will grow best in your yard? I have 50 years of
+              experience designing beautiful landscapes appropriate to your
+              space and environment.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <aside>
         <h3>Contact</h3>
         <address>
@@ -168,7 +169,7 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <footer>
       <span>&copy; Copyright {year} Walt Peters.</span>
     </footer>
-  </div>
+  </>
 );
 
 export default IndexPage;

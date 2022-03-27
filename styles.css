@@ -65,11 +65,11 @@ p:not(:last-of-type) {
   z-index: 1;
 }
 
-header {
+.header-contents {
   padding: 1rem;
   flex: 4;
 }
-header > p {
+.header-contents > p {
   max-width: 33rem;
   line-height: 1.7;
 }
@@ -131,17 +131,20 @@ h3 {
   margin: 0 auto;
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
-main {
-  padding-top: 0.5rem;
+
+header {
+  padding-top: 1rem;
 }
 
 article,
+header,
 aside,
 section,
 footer {
   margin-bottom: 4rem;
 }
 
+header,
 main,
 footer {
   max-width: 56rem;
@@ -191,8 +194,7 @@ address {
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
 
-.off-container {
-  margin-bottom: 1rem;
+.offering {
   background: var(--card);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   padding: 1rem;
@@ -226,15 +228,19 @@ h4 {
   justify-content: center;
 }
 
+.no-link {
+  user-select: none;
+}
+
 @media (min-width: 42rem) {
-  main {
+  header {
     padding-top: 1rem;
   }
   address {
     --columns: 2;
   }
   .offerings {
-    --columns: 3;
+    --columns: 2;
   }
 
   .banner {
@@ -246,7 +252,7 @@ h4 {
     font-size: 2.125rem;
     text-align: left;
   }
-  header {
+  .header-contents {
     padding: 5rem 1rem;
   }
 
