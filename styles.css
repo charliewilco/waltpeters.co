@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --bg: rgb(248, 244, 236);
+  --fg: #333;
+  --card: #fefdfb;
+}
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Source Serif Pro', Charter, Georgia, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+aside,
+figcaption,
+figure,
+main,
+menu,
+details {
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  border-style: none;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131313;
+    --fg: #fefdfb;
+    --card: #2b2b2b;
+  }
+}
+
+.banner {
+  background: var(--card);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  z-index: 1;
+}
+
+header {
+  padding: 1rem;
+  flex: 4;
+}
+header > p {
+  max-width: 33rem;
+  line-height: 1.7;
+}
+
+h1 {
+  color: #d8a75b;
+  font-weight: 400;
+  font-size: 1.875rem;
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+figure {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+
+.banner-logo-container {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.banner-color-offset {
+  position: relative;
+}
+
+.banner-color-offset::after {
+  content: '';
+  width: 12rem;
+  height: 12rem;
+  background: rgba(216, 167, 91, 0.5);
+  padding: 1rem;
+  position: absolute;
+  margin: 0;
+  right: -0.5rem;
+  top: -0.5rem;
+  z-index: -1;
+}
+
+h3 {
+  color: #d8a75b;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.offerings {
+  --columns: 1;
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+main {
+  padding-top: 0.5rem;
+}
+
+article,
+aside,
+section,
+footer {
+  margin-bottom: 4rem;
+}
+
+main,
+footer {
+  max-width: 56rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article {
+  max-width: 80ch;
+  margin-right: auto;
+}
+
+article p {
+  font-size: 112.5%;
+  line-height: 1.7;
+}
+
+b {
+  color: #d8a75b;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  padding: 0.5rem;
+  display: inline-block;
+  background-color: #d8a75b;
+  color: #fefdfb;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+address p {
+  margin-bottom: 1rem;
+}
+address {
+  --columns: 1;
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+
+.off-container {
+  margin-bottom: 1rem;
+  background: var(--card);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 1rem;
+}
+
+.off-icon {
+  display: block;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.875rem;
+}
+
+.off-content {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  text-align: left;
+  margin: 0;
+}
+
+.off-icon-container {
+  background-color: #d8a75b;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.75rem 0.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 42rem) {
+  main {
+    padding-top: 1rem;
+  }
+  address {
+    --columns: 2;
+  }
+  .offerings {
+    --columns: 3;
+  }
+
+  .banner {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 2.125rem;
+    text-align: left;
+  }
+  header {
+    padding: 5rem 1rem;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  figure {
+    flex: 2;
+    height: auto;
+  }
+
+  .banner-logo-container {
+    text-align: left;
+  }
+
+  .banner-color-offset::after {
+    right: -1rem;
+    top: -1rem;
+  }
+}
