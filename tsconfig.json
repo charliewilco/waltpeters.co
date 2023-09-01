@@ -15,14 +15,32 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "lib": ["dom", "es2016"],
+    "lib": [
+      "dom",
+      "es2016"
+    ],
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
-  "exclude": ["__tests__", "server.js"],
-  "include": ["next.config.mjs", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "__tests__",
+    "server.js"
+  ],
+  "include": [
+    "next.config.mjs",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ]
 }
